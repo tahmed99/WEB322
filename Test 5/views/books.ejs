@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Books</title>
+</head>
+<body>
+    <h1>Books</h1>
+    <a href="/books/new">Add New Book</a>
+    <ul>
+        <% books.forEach(function(book) { %>
+            <li>
+                <%= book.title %> by <%= book.author %> (<%= book.year %>)
+                <form action="/books/delete/<%= book.id %>" method="POST" style="display:inline;">
+                    <button type="submit">Delete</button>
+                </form>
+            </li>
+        <% }) %>
+    </ul>
+</body>
+</html>
