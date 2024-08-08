@@ -1,0 +1,41 @@
+{
+  "development": {
+    "username": "SenecaDB_owner",
+    "password": "OJQ8eVKI5Liu",
+    "database": "SenecaDB",
+    "host": "ep-wispy-sound-a580g0nv.us-east-2.aws.neon.tech",
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
+  },
+  "test": {
+    "username": "SenecaDB_owner",
+    "password": "OJQ8eVKI5Liu",
+    "database": "SenecaDB",
+    "host": "ep-wispy-sound-a580g0nv.us-east-2.aws.neon.tech",
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
+  },
+  "production": {
+    "username": "SenecaDB_owner",
+    "password": "OJQ8eVKI5Liu",
+    "database": "SenecaDB",
+    "host": "ep-wispy-sound-a580g0nv.us-east-2.aws.neon.tech",
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
+  }
+}

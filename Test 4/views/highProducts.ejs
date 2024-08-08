@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>High Value Products</title>
+  <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/users">Users</a>
+    <a href="/products">Products</a>
+    <a href="/products/high">High Value Products</a>
+  </nav>
+  <h1>High Value Products</h1>
+  <table>
+    <tr>
+      <th>PID</th>
+      <th>Name</th>
+      <th>Price</th>
+    </tr>
+    <% products.forEach(product => { %>
+      <tr>
+        <td><%= product.PID %></td>
+        <td><%= product.name %></td>
+        <td><%= product.price %></td>
+      </tr>
+    <% }) %>
+  </table>
+</body>
+</html>
