@@ -1,0 +1,13 @@
+<h2>User History for <%= user.userName %> (<%= user.email %>)</h2>
+<table>
+    <tr>
+        <th>Login Date/Time</th>
+        <th>Client Information</th>
+    </tr>
+    <% user.loginHistory.forEach(function(history) { %>
+        <tr>
+            <td><%= history.dateTime %></td>
+            <td><%= history.userAgent %></td>
+        </tr>
+    <% }); %>
+</table>

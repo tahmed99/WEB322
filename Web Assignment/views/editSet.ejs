@@ -1,0 +1,25 @@
+<form method="POST" action="/lego/editSet">
+    <input type="hidden" name="set_num" value="<%= set.set_num %>">
+
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" value="<%= set.name %>" required>
+
+    <label for="year">Year:</label>
+    <input type="number" name="year" id="year" value="<%= set.year %>" required>
+
+    <label for="num_parts">Number of Parts:</label>
+    <input type="number" name="num_parts" id="num_parts" value="<%= set.num_parts %>" required>
+
+    <label for="theme_id">Theme:</label>
+    <select name="theme_id" id="theme_id" required>
+        <% themes.forEach(theme => { %>
+            <option value="<%= theme.id %>" <%= set.theme_id == theme.id ? "selected" : "" %>><%= theme.name %></option>
+        <% }) %>
+    </select>
+
+    <label for="img_url">Image URL:</label>
+    <input type="url" name="img_url" id="img_url" value="<%= set.img_url %>" required>
+
+    <button type="submit">Update Set</button>
+</form>
+<a href="/lego/deleteSet/<%= set.set_num %>" class="btn btn-danger">Delete Set</a>

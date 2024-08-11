@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/main.css" rel="stylesheet">
+    <title>About</title>
+</head>
+<body>
+    <%- include('partials/navbar', { page: '/about' }) %>
+    <div class="container mx-auto">
+        <div class="hero min-h-screen bg-base-200">
+            <div class="hero-content text-center">
+                <div class="max-w-md">
+                    <h1 class="text-5xl font-bold">About</h1>
+                    <p class="py-6">All about me and my passion for Lego sets.</p>
+                </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+                <img src="https://img.freepik.com/premium-photo/illustration-cute-muslim-man-white-background_659858-813.jpg?w=826" alt="About Me">
+            </div>
+            <div>
+                <p>I am a Lego enthusiast with a passion for building and collecting Lego sets. I enjoy exploring new designs and sharing my collection with others. In my free time, I also like to read, gym, and spend time with family and friends.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

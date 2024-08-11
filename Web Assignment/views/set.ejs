@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= set.name %></title>
+    <link rel="stylesheet" href="/path/to/main.css"> 
+</head>
+<body>
+    <%- include('partials/navbar', {page: ''}) %>
+    <div class="hero">
+        <h1><%= set.name %></h1>
+        <p>Below, you will find detailed information about the set: <%= set.name %></p>
+    </div>
+    <img src="<%= set.img_url %>" alt="<%= set.name %>" style="max-width: 300px;">
+    <p><strong>Year:</strong> <%= set.year %></p>
+    <p><strong>Theme:</strong> <%= set.theme %></p>
+    <p><strong>Number of Parts:</strong> <%= set.num_parts %></p>
+    <p><strong>Set Number:</strong> <%= set.set_num %></p>
+    <p><strong>Quote:</strong> <span id="quote"></span></p>
+    <a href="#" onclick="history.back(); return false;">Back</a>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch('https://quotable.io/random')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('quote').innerText = `"${data.content}" - ${data.author}`;
+                });
+        });
+    </script>
+</body>
+</html>

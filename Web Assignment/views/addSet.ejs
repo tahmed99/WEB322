@@ -1,0 +1,25 @@
+<form method="POST" action="/lego/addSet">
+    <label for="set_num">Set Number:</label>
+    <input type="text" name="set_num" id="set_num" required>
+
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" required>
+
+    <label for="year">Year:</label>
+    <input type="number" name="year" id="year" required>
+
+    <label for="num_parts">Number of Parts:</label>
+    <input type="number" name="num_parts" id="num_parts" required>
+
+    <label for="theme_id">Theme:</label>
+    <select name="theme_id" id="theme_id" required>
+        <% themes.forEach(theme => { %>
+            <option value="<%= theme.id %>"><%= theme.name %></option>
+        <% }) %>
+    </select>
+
+    <label for="img_url">Image URL:</label>
+    <input type="url" name="img_url" id="img_url" required>
+
+    <button type="submit">Add Set</button>
+</form>
